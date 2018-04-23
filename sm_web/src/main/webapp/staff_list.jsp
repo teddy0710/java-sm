@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -43,22 +44,23 @@
                     <th scope="col">入职时间</th>
                     <th scope="col">部门</th>
                     <th scope="col">状态</th>
+                    <th scope="col">操作</th>
                 </tr>
                 <c:forEach items="${LIST}" var="staff">
                     <tr>
                         <td>${staff.name}</td>
                         <td>${staff.sex}</td>
-                        <td>${staff.bornDate}</td>
-                        <td>${staff.workTime}</td>
-                        <td>${staff.did}</td>
+                        <td><fmt:formatDate value="${staff.bornDate}" pattern="yyyy-MM-dd"/></td>
+                        <td><fmt:formatDate value="${staff.workTime}" pattern="yyyy-MM-dd HH:mm"/></td>
+                        <td>${staff.department.name}</td>
                         <td>${staff.status}</td>
                         <td>
-                            <a href="toEdit.do?id=${dep.id}" class="btn">编辑</a>
-                            <a href="remove.do?id=${dep.id}" class="btn">删除</a>
+                            <a href="toEdit.do?id=${staff.id}" class="btn">编辑</a>
+                            <a href="remove.do?id=${staff.id}" class="btn">删除</a>
+                            <a href="detail.do?id=${staff.id}" class="btn">详情</a>
                         </td>
                     </tr>
                 </c:forEach>
-
             </table>
             <!--列表-->
             <!--右边底部-->
