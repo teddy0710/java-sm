@@ -21,7 +21,7 @@
         <property name="password" value="123456"/>
     </bean>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" value="dataSource"/>
+        <property name="dataSource" ref="dataSource"/>
         <property name="typeAliasesPackage" value="com.zhangflg.sm.entity"/>
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
@@ -29,4 +29,19 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
+    <!--声明式事务-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="search*" read-only="true"/>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="txPointcut" expression="execution(* com.zhangflg.sm.service.*.*(..))"/>
+    </aop:config>
 </beans>
