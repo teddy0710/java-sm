@@ -1,0 +1,142 @@
+
+
+create database jdbctest;
+create table user(
+uid tinyint key auto_increment,
+username varchar(20),
+password varchar(20),
+name varchar(20)
+);
+
+insert into user values(null,'a','a','a');
+insert into user values(null,'b','b','b');
+insert into user values(null,'c','c','c');
+
+create database if not exists message_board default character set utf8;
+create table  message(
+id bigint(20) not null auto_increment,
+user_id bigint(20) not null,
+username varchar(32) not null,
+title varchar(32) not null,
+content varchar(4096) not null,
+create_time datetime not null,
+primary key(id)
+)engine = innodb auto_increment=24 default charset=utf8;
+
+insert into message values(1,1,'111','111','111',now());
+insert into message values(2,2,'122','122','122',now());
+insert into message values(3,3,'133','133','133',now());
+insert into message values(4,4,'144','144','144',now());
+insert into message values(5,5,'155','155','155',now());
+insert into message values(6,6,'166','166','166',now());
+insert into message values(7,6,'166','166','166',now());
+insert into message values(8,6,'166','166','166',now());
+insert into message values(9,6,'166','166','166',now());
+insert into message values(10,6,'166','166','166',now());
+insert into message values(11,6,'166','166','166',now());
+
+
+create table  user(
+id bigint(20) not null auto_increment,
+username varchar(32) not null,
+password varchar(32) not null,
+real_name varchar(32) default null,
+birthday datetime default null,
+phone varchar(16) default null,
+address varchar(128) default null,
+primary key(id)
+)engine = innodb auto_increment=9 default charset=utf8;
+
+
+insert into user values(1,'1','1','1',now(),'1','1');
+
+create database mytest;
+use mytest;
+create table users(
+id int auto_increment primary key,
+username varchar(50) ,
+userpass varchar(50),
+nickname varchar(20)
+);
+
+insert into users values(1,'admin','admin','管理员');
+insert into users values(2,'admin2','admin2','管理员2');
+insert into users values(3,'admin3','admin3','管理员3');
+
+use mytest;
+select * from users;
+
+
+create database mydb;
+use mydb;
+
+create table users(
+id int auto_increment primary key,
+username varchar(50) not null,
+userpass varchar(50) not null,
+nickname varchar(50) ,
+age int,
+gender varchar(5),
+phone varchar(13),
+email varchar(20),
+createTime datetime,
+updateTime datetime,
+lastLogin datetime,
+userStatus int,
+remark text
+);
+
+select * from users;
+
+insert into users values(1,'a','a','a',18,'a','a','a',now(),now(),now(),0,'无');
+insert into users values(2,'a','a','a',19,'a','a','a',now(),now(),now(),0,'无');
+insert into users values(3,'a','a','a',18,'a','a','a',now(),now(),now(),0,'无');
+insert into users values(4,'a','a','a',18,'a','a','a',now(),now(),now(),0,'无');
+insert into users values(5,'a','a','b',18,'a','a','a',now(),now(),now(),0,'无');
+insert into users values(6,'a','a','b',18,'a','a','a',now(),now(),now(),1,'无');
+insert into users values(7,'a','a','b',18,'a','a','a',now(),now(),now(),2,'无');
+
+show databases;
+
+create database db;
+use db;
+create table department(
+id int primary key auto_increment,
+name varchar(20) not null,
+address varchar(100)
+);
+
+create table staff(
+id int primary key auto_increment,
+account varchar(20) not null,
+password varchar(20) not null,
+status varchar(10) not null,
+did int,
+name varchar(20),
+sex char(2),
+id_number char(18),
+work_time datetime,
+leave_time datetime,
+born_date date,
+info varchar(200)
+);
+
+create table log(
+opr_time datetime not null,
+type varchar(20) not null,
+operator varchar(20) not null,
+moudle varchar(20) not null,
+operation varchar(20) not null,
+result varchar(100) not null
+);
+
+
+alter table staff add constraint fk_staff_dep foreign key(did) references department(id);
+
+select * from log;
+
+
+SELECT * FROM department;
+
+insert into department(name,address) values("张三","北京");
+

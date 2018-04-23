@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1b39b27-8e0f-487d-af34-9040f3af1e09" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/sm_service/src/main/java/com/zhangflg/sm/dao/LogDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_service/src/main/java/com/zhangflg/sm/service/LogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_service/src/main/java/com/zhangflg/sm/service/impl/LogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_service/src/main/resources/com/zhangflg/sm/dao/LogDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/controller/LogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/global/LogAdvice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/controller/SelfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/controller/SelfController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sm_web/target/sm_web/WEB-INF/lib/sm_service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sm_web/target/sm_web/WEB-INF/lib/sm_service-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -98,19 +91,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogAdvice.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LogAdvice.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/global/LogAdvice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+            <state relative-caret-position="182">
+              <caret line="22" column="72" lean-forward="true" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2139#2140#0" expanded="true" />
+                <element signature="e#2169#2170#0" expanded="true" />
+                <element signature="e#2300#2301#0" expanded="true" />
+                <element signature="e#2330#2331#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LogController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/controller/LogController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="74">
@@ -158,7 +155,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>department</find>
+      <find>imooc</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\TEDDY\Desktop\sm</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -202,8 +203,8 @@
         <option value="$PROJECT_DIR$/sm_service/src/main/java/com/zhangflg/sm/service/LogService.java" />
         <option value="$PROJECT_DIR$/sm_service/src/main/java/com/zhangflg/sm/service/impl/LogServiceImpl.java" />
         <option value="$PROJECT_DIR$/sm_service/src/main/resources/com/zhangflg/sm/dao/LogDao.xml" />
-        <option value="$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/global/LogAdvice.java" />
         <option value="$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/controller/LogController.java" />
+        <option value="$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/global/LogAdvice.java" />
       </list>
     </option>
   </component>
@@ -580,7 +581,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524449726274</updated>
       <workItem from="1524449732419" duration="22348000" />
-      <workItem from="1524482184854" duration="13310000" />
+      <workItem from="1524482184854" duration="13444000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目，添加依赖">
       <created>1524451747644</created>
@@ -694,11 +695,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524495165130</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="日志实现">
+      <created>1524498965727</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1524498965727</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35658000" />
+    <option name="totallyTimeSpent" value="35792000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -711,6 +719,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="592" y="123" width="1257" height="917" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -731,7 +740,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32947975" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32947975" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.66580975" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.66580975" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32947975" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32947975" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27151212" />
@@ -803,7 +812,8 @@
     <MESSAGE value="员工业务层" />
     <MESSAGE value="员工管理完成" />
     <MESSAGE value="登陆实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="登陆实现" />
+    <MESSAGE value="日志实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1141,16 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/global/LogAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Spring+MyBatis整合开发人员信息管理系统源码/sm/sm_web/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-742" />
@@ -1162,6 +1162,20 @@
           <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/zhangflg/sm/global/LogAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="22" column="72" lean-forward="true" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2139#2140#0" expanded="true" />
+            <element signature="e#2169#2170#0" expanded="true" />
+            <element signature="e#2300#2301#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
           </folding>
         </state>
       </provider>
