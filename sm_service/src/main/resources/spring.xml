@@ -44,4 +44,7 @@
     <aop:config>
         <aop:pointcut id="txPointcut" expression="execution(* com.zhangflg.sm.service.*.*(..))"/>
     </aop:config>
+
+    <!--开启Spring全局扫描-->
+    <context:component-scan base-package="com.zhangflg.sm"/>
 </beans>
