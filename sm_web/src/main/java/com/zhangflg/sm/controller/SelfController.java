@@ -42,4 +42,28 @@ public class SelfController {
     public void main(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
+
+
+    public void info(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("../info.jsp").forward(request, response);
+    }
+
+    public void toChangePassword(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("../change_password.jsp").forward(request, response);
+    }
+
+    public void changePassword(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String password = request.getParameter("password");
+        String password1 = request.getParameter("password1");
+        HttpSession session = request.getSession();
+        Staff staff = (Staff) session.getAttribute("USER");
+        if (!staff.getPassword().equals(password)) {
+            response.sendRedirect("toChangePassword.do");
+        } else {
+            selfService.changePassword(staff.getId(), password1);
+//            response.sendRedirect("../logout.do");
+            response.getWriter().print("<script type=\"text/javascript\">parent.location.href=\"../logout.do\"</script>");
+        }
+    }
+
 }
